@@ -1,3 +1,5 @@
+export const dynamic = "force-static";
+
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -103,8 +105,9 @@ export default function HomePage() {
         <DebugPanel
           pageName="home"
           notes={[
-            "Stage 0: data + UI shell + Debug Panel (no caching techniques yet).",
-            "In production builds, renderedAt should reflect build-time for static pages.",
+            'Stage 1: Home is explicitly static (dynamic = "force-static").',
+            "Proof should be taken from `npm run build && npm start`, not `npm run dev`.",
+            "In production, renderedAt should not change on refresh unless you rebuild.",
           ]}
         />
       </section>
