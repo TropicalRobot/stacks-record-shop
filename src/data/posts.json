@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "how-we-grade-vinyl",
+    "title": "How we grade vinyl (without the nonsense)",
+    "excerpt": "A quick guide to grading that explains what you actually get when you buy VG+.",
+    "tags": ["guides", "vinyl-care"],
+    "publishedAt": "2025-12-10T09:00:00.000Z",
+    "updatedAt": "2025-12-10T09:00:00.000Z"
+  },
+  {
+    "slug": "staff-picks-december",
+    "title": "Staff picks: December rotation",
+    "excerpt": "Six records we keep reaching for when it’s cold out.",
+    "tags": ["staff-picks"],
+    "publishedAt": "2025-12-05T09:00:00.000Z",
+    "updatedAt": "2025-12-05T09:00:00.000Z"
+  },
+  {
+    "slug": "new-arrivals-week-50",
+    "title": "New arrivals: Week 50",
+    "excerpt": "A small batch of essentials and leftfield gems — first come, first served.",
+    "tags": ["new-arrivals"],
+    "publishedAt": "2025-12-02T09:00:00.000Z",
+    "updatedAt": "2025-12-02T09:00:00.000Z"
+  }
+]

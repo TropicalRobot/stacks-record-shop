@@ -1,0 +1,68 @@
+[
+  {
+    "id": "rec_001",
+    "artist": "Talking Heads",
+    "title": "Remain in Light",
+    "year": 1980,
+    "label": "Sire",
+    "genres": ["New Wave", "Art Rock"],
+    "formats": ["LP", "Album", "Reissue"],
+    "price_gbp": 24.99,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "rec_002",
+    "artist": "Nina Simone",
+    "title": "Pastel Blues",
+    "year": 1965,
+    "label": "Philips",
+    "genres": ["Jazz", "Soul"],
+    "formats": ["LP", "Album"],
+    "price_gbp": 22.5,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "rec_003",
+    "artist": "Radiohead",
+    "title": "In Rainbows",
+    "year": 2007,
+    "label": "XL",
+    "genres": ["Alternative", "Experimental"],
+    "formats": ["LP", "Album"],
+    "price_gbp": 26.0,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "rec_004",
+    "artist": "J Dilla",
+    "title": "Donuts",
+    "year": 2006,
+    "label": "Stones Throw",
+    "genres": ["Hip-Hop", "Instrumental"],
+    "formats": ["LP", "Album"],
+    "price_gbp": 27.99,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "rec_005",
+    "artist": "Boards of Canada",
+    "title": "Music Has the Right to Children",
+    "year": 1998,
+    "label": "Warp",
+    "genres": ["Electronic", "IDM"],
+    "formats": ["2xLP", "Album"],
+    "price_gbp": 29.99,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "rec_006",
+    "artist": "Fela Kuti",
+    "title": "Zombie",
+    "year": 1976,
+    "label": "Coconut",
+    "genres": ["Afrobeat"],
+    "formats": ["LP", "Album", "Reissue"],
+    "price_gbp": 25.0,
+    "updatedAt": "2025-12-01T10:00:00.000Z"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "recordId": "rec_001",
+    "inStock": true,
+    "quantity": 6,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  },
+  {
+    "recordId": "rec_002",
+    "inStock": true,
+    "quantity": 2,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  },
+  {
+    "recordId": "rec_003",
+    "inStock": false,
+    "quantity": 0,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  },
+  {
+    "recordId": "rec_004",
+    "inStock": true,
+    "quantity": 9,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  },
+  {
+    "recordId": "rec_005",
+    "inStock": true,
+    "quantity": 1,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  },
+  {
+    "recordId": "rec_006",
+    "inStock": false,
+    "quantity": 0,
+    "lastCheckedAt": "2025-12-20T12:30:00.000Z"
+  }
+]
