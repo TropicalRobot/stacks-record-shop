@@ -16,7 +16,11 @@ export function TopNav() {
           </Link>
           {/* We’ll add these routes in later stages */}
           <span className="opacity-50">Records</span>
-          <span className="opacity-50">Journal</span>
+          <span className="opacity-50">
+            <Link className="hover:text-foreground" href="/journal">
+              Journal
+            </Link>
+          </span>
           <span className="opacity-50">Search</span>
         </nav>
       </div>

@@ -9,9 +9,9 @@ import { getFeaturedRecords, getInventoryByRecordId } from "@/lib/data/records";
 import { getLatestPosts } from "@/lib/data/posts";
 import { formatGBP } from "@/lib/demo";
 
-export default function HomePage() {
+export default async function HomePage() {
   const featured = getFeaturedRecords(4);
-  const posts = getLatestPosts(3);
+  const posts = await getLatestPosts(3);
 
   return (
     <div className="space-y-10">
@@ -28,7 +28,7 @@ export default function HomePage() {
             <Link href="/">Browse featured</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link href="/">Read the journal</Link>
+            <Link href="/journal">Read the journal</Link>
           </Button>
         </div>
       </section>
