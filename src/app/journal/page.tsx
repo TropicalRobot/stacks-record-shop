@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DebugPanel } from "@/components/debug/DebugPanel";
 import { getAllPosts } from "@/lib/data/posts";
+import Link from "next/link";
 
 /**
  * Stage 2: ISR
@@ -26,7 +27,14 @@ export default async function JournalIndexPage() {
         {posts.map((post) => (
           <Card key={post.slug}>
             <CardHeader>
-              <CardTitle className="text-base">{post.title}</CardTitle>
+              <CardTitle className="text-base">
+                <Link
+                  href={`/journal/${post.slug}`}
+                  className="hover:underline"
+                >
+                  {post.title}
+                </Link>
+              </CardTitle>{" "}
             </CardHeader>
             <CardContent className="space-y-2">
               <p className="text-sm text-muted-foreground">{post.excerpt}</p>

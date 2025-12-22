@@ -27,3 +27,8 @@ export async function getLatestPosts(limit = 3): Promise<PostItem[]> {
   const posts = await getAllPosts();
   return posts.slice(0, limit);
 }
+
+export async function getPostBySlug(slug: string): Promise<PostItem | null> {
+  const posts = await getAllPosts();
+  return posts.find((p) => p.slug === slug) ?? null;
+}
