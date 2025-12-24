@@ -15,6 +15,9 @@ export function TopNav() {
             Home
           </Link>
           {/* We’ll add these routes in later stages */}
+          <Link className="hover:text-foreground" href="/cache-lab">
+            Cache Lab
+          </Link>
           <span className="opacity-50">Records</span>
           <span className="opacity-50">
             <Link className="hover:text-foreground" href="/journal">

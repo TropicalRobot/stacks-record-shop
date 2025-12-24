@@ -1,3 +1,5 @@
+import { unstable_cache } from "next/cache";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { DebugPanel } from "@/components/debug/DebugPanel";
@@ -10,8 +12,14 @@ import Link from "next/link";
  */
 export const revalidate = 10; // seconds (short for demo purposes)
 
+const getJournalPostsCached = unstable_cache(
+  async () => getAllPosts(),
+  ["journal-posts"],
+  { tags: ["journal"] },
+);
+
 export default async function JournalIndexPage() {
-  const posts = await getAllPosts();
+  const posts = await getJournalPostsCached();
 
   return (
     <div className="space-y-8">

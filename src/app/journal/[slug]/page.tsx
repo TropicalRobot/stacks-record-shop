@@ -1,4 +1,5 @@
 export const dynamic = "force-static";
+import { unstable_cache } from "next/cache";
 
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +12,12 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+const getPostCached = unstable_cache(
+  async (slug: string) => getPostBySlug(slug),
+  ["journal-post-by-slug"],
+  { tags: ["journal"] },
+);
+
 export default async function JournalPostPage({
   params,
 }: {
@@ -18,7 +25,7 @@ export default async function JournalPostPage({
 }) {
   const { slug } = await params;
 
-  const post = await getPostBySlug(slug);
+  const post = await getPostCached(slug);
   if (!post) notFound();
 
   return (
