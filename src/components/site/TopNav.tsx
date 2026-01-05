@@ -24,7 +24,9 @@ export function TopNav() {
               Journal
             </Link>
           </span>
-          <span className="opacity-50">Search</span>
+          <Link className="hover:text-foreground" href="/search">
+            Search
+          </Link>
         </nav>
       </div>
     </header>
