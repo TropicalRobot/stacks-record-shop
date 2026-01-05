@@ -18,7 +18,9 @@ export function TopNav() {
           <Link className="hover:text-foreground" href="/cache-lab">
             Cache Lab
           </Link>
-          <span className="opacity-50">Records</span>
+          <Link className="hover:text-foreground" href="/records">
+            Records
+          </Link>{" "}
           <span className="opacity-50">
             <Link className="hover:text-foreground" href="/journal">
               Journal

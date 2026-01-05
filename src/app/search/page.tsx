@@ -74,11 +74,6 @@ export default async function SearchPage({
             <CardContent className="space-y-3">
               {recordResults.length ? (
                 recordResults.map((r) => {
-                  const inv = getInventoryByRecordId(r.id);
-                  const stockLabel = inv?.inStock
-                    ? `In stock (${inv.quantity})`
-                    : "Out of stock";
-
                   return (
                     <div key={r.id} className="space-y-1">
                       <div className="flex items-start justify-between gap-3">
@@ -101,7 +96,7 @@ export default async function SearchPage({
                             {g}
                           </Badge>
                         ))}
-                        <Badge variant="outline">{stockLabel}</Badge>
+                        <Badge variant="outline">View details for stock</Badge>
                         <Badge variant="outline">
                           <Link
                             className="hover:underline"

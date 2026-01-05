@@ -10,7 +10,7 @@ import { getLatestPosts } from "@/lib/data/posts";
 import { formatGBP } from "@/lib/demo";
 
 export default async function HomePage() {
-  const featured = getFeaturedRecords(4);
+  const featured = await getFeaturedRecords(4);
   const posts = await getLatestPosts(3);
 
   return (
@@ -40,11 +40,6 @@ export default async function HomePage() {
           </CardHeader>
           <CardContent className="space-y-3">
             {featured.map((r) => {
-              const inv = getInventoryByRecordId(r.id);
-              const stockLabel = inv?.inStock
-                ? `In stock (${inv.quantity})`
-                : "Out of stock";
-
               return (
                 <div
                   key={r.id}
@@ -63,7 +58,9 @@ export default async function HomePage() {
                           {g}
                         </Badge>
                       ))}
-                      <Badge variant="outline">{stockLabel}</Badge>
+                      <Badge variant="outline">
+                        View details for stock
+                      </Badge>{" "}
                     </div>
                   </div>
                   <div className="shrink-0 font-mono text-sm">

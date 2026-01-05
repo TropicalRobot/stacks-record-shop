@@ -5,11 +5,12 @@ import { getBuildStamp, isoNow } from "@/lib/demo";
 type DebugPanelProps = {
   pageName: string;
   notes?: string[];
+  facts?: Record<string, string>;
   // Stage 0: we intentionally do NOT use cookies()/headers() here
   // because we don’t want to accidentally force pages to be dynamic.
 };
 
-export function DebugPanel({ pageName, notes }: DebugPanelProps) {
+export function DebugPanel({ pageName, notes, facts }: DebugPanelProps) {
   // For static pages, this will be evaluated at build-time.
   // In dev mode it may appear to change more often — we’ll cover that later.
   const renderedAt = isoNow();
@@ -33,6 +34,19 @@ export function DebugPanel({ pageName, notes }: DebugPanelProps) {
             <div className="font-mono">{buildStamp}</div>
           </div>
         </div>
+
+        {facts ? (
+          <div className="space-y-1">
+            <div className="grid gap-2 sm:grid-cols-2">
+              {Object.entries(facts).map(([k, v]) => (
+                <div key={k}>
+                  <div className="text-muted-foreground">{k}</div>
+                  <div className="font-mono">{v}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         {notes?.length ? (
           <div className="space-y-1">
