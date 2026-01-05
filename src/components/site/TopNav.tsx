@@ -21,13 +21,14 @@ export function TopNav() {
           <Link className="hover:text-foreground" href="/records">
             Records
           </Link>{" "}
-          <span className="opacity-50">
-            <Link className="hover:text-foreground" href="/journal">
-              Journal
-            </Link>
-          </span>
+          <Link className="hover:text-foreground" href="/journal">
+            Journal
+          </Link>
           <Link className="hover:text-foreground" href="/search">
             Search
+          </Link>
+          <Link className="hover:text-foreground" href="/account">
+            Account
           </Link>
         </nav>
       </div>
